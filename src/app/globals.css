@@ -2,20 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Custom Global Styles */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Body Styling for Dark Mode */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-900 text-white;
+  font-family: 'Inter', sans-serif; /* You can customize the font as needed */
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  @apply text-white font-bold;
+}
+
+/* Custom Classes */
+
+/* Card Style for Dashboard Components */
+.card {
+  @apply bg-gray-800 p-4 rounded-lg shadow max-w-full;
+}
+
+/* Progress Bar Style */
+.progress-bar-bg {
+  @apply bg-gray-700 rounded-full h-4;
+}
+
+.progress-bar-fill {
+  @apply bg-purple-500 h-4 rounded-full;
+}
+
+/* Notification Styles */
+.notification {
+  @apply bg-red-500 bg-opacity-25 p-2 rounded text-red-400;
+}
+
+/* Chart Container */
+.chart-container {
+  @apply max-h-64;
+}
+
+/* Button Styles */
+.button {
+  @apply px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600;
+}
+
+/* List Styles */
+.list-item {
+  @apply flex justify-between py-2 border-b border-gray-700;
+}
+
+.list-item-empty {
+  @apply text-gray-400;
+}
+
+/* Typography */
+.text-gray-light {
+  @apply text-gray-400;
+}
+
+.text-green-highlight {
+  @apply text-green-400;
+}
+
+.text-orange-highlight {
+  @apply text-orange-400;
 }
